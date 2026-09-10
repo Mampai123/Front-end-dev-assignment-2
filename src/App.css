@@ -1,0 +1,210 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #1e293b;
+}
+
+/* Main App */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  text-align: center;
+  padding: 35px 20px;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* Main Section */
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* Sorting Section */
+.controls {
+  background: white;
+  padding: 18px 22px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.controls label {
+  font-weight: 600;
+  color: #475569;
+}
+
+.controls select {
+  padding: 10px 15px;
+  border: 2px solid #cbd5e1;
+  border-radius: 8px;
+  background-color: white;
+  color: #334155;
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.controls select:hover,
+.controls select:focus {
+  border-color: #6366f1;
+}
+
+/* Student List */
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+/* Student Card */
+.student-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+}
+
+.student-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 25px rgba(79, 70, 229, 0.18);
+  border-color: #a5b4fc;
+}
+
+/* Student Image */
+.student-photo {
+  width: 115px;
+  height: 115px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 4px solid #6366f1;
+  padding: 3px;
+  background-color: white;
+}
+
+/* Student Information */
+.student-info {
+  flex: 1;
+}
+
+.student-info h2 {
+  color: #4f46e5;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+
+.student-info p {
+  font-size: 14px;
+  margin: 8px 0;
+  color: #64748b;
+}
+
+.student-info strong {
+  color: #334155;
+}
+
+/* CGPA Highlight */
+.student-info p:last-child {
+  display: inline-block;
+  background-color: #ecfdf5;
+  color: #047857;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.student-info p:last-child strong {
+  color: #047857;
+}
+
+/* Footer */
+.footer {
+  background-color: #0f172a;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .student-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .header {
+    padding: 28px 15px;
+  }
+
+  .header h1 {
+    font-size: 25px;
+  }
+
+  main {
+    width: 92%;
+    margin: 20px auto;
+  }
+
+  .controls {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .student-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 15px;
+  }
+
+  .student-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .student-info h2 {
+    font-size: 20px;
+  }
+}
